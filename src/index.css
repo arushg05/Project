@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root color variables for light mode */
+:root {
+  --color-light: #ffffff;
+  --color-dark: #171717;
+  --color-bg: var(--color-light);
+  --color-text: var(--color-dark);
+}
+
+/* Override variables in dark mode */
+.dark {
+  --color-light: #171717;
+  --color-dark: #f5f5f5;
+  --color-bg: var(--color-light);
+  --color-text: var(--color-dark);
+}
+
+/* Global body styling with smooth theme transition */
+body {
+  font-family:
+    "Inter Variable",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+  color: var(--color-text);
+  background: var(--color-bg);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Accent text for light and dark modes */
+.accent-text {
+  @apply text-slate-600 dark:text-slate-300;
+}
+
+/* Only use this for auth-related input fields */
+.auth-input-field {
+  @apply w-full px-4 py-3 rounded-container bg-white border border-gray-200 
+    focus:border-primary focus:ring-1 focus:ring-primary outline-none 
+    transition-shadow shadow-sm hover:shadow 
+    dark:bg-gray-800 dark:border-gray-700 dark:text-white 
+    dark:focus:border-primary dark:focus:ring-primary 
+    placeholder-gray-400 dark:placeholder-gray-500;
+}
+
+/* Only use this for auth buttons */
+.auth-button {
+  @apply w-full px-4 py-3 rounded bg-primary text-white font-semibold 
+    hover:bg-primary-hover transition-colors 
+    shadow-sm hover:shadow 
+    disabled:opacity-50 disabled:cursor-not-allowed 
+    dark:bg-primary dark:hover:bg-primary-hover;
+}
