@@ -1,8 +1,4 @@
-# Animal Classifier Setup
-  
-This is a project built with [Chef](https://chef.convex.dev) using [Convex](https://convex.dev) as its backend.
-  
-This project is connected to the Convex deployment named [`dependable-curlew-399`](https://dashboard.convex.dev/d/dependable-curlew-399).
+
   
 ## Project structure
   
